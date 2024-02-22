@@ -18,12 +18,12 @@ export class PlayerGateway implements OnGatewayConnection {
   }
   
 
-  @SubscribeMessage('playerReady')
+  @SubscribeMessage('player:ready')
   onPlayerReady(socket: Socket) {
     this.playerService.handleOnPlayerReady(socket);
   }
 
-  @SubscribeMessage('playGame')
+  @SubscribeMessage('start:game')
   onPlayGame(@MessageBody() startNumber: any, @ConnectedSocket() socket: Socket){
     this.playerService.handleOnPlayGame(socket, startNumber);
   }
