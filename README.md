@@ -25,7 +25,7 @@ $ docker-compose up --build
 - Proper unit and integration tests
 - Player component could be more sophisticated and stored in DB as well, and that would be a good starting point to introduce functions like; restart game if the two players are present, make a leaderboard with scores for each player
 - Implementation of the CacheService could be more clever (im using nestjs internal cache store). For example; add redis as an external service and actually manage all related socket interim-states in-memory and sync everything periodically
-- Theoritically, this small app could be overengineered enough to make it into a microservice architecture with a MessageBroker to make this as asynchronous as possible![Simple flow diagram](docs/2.png?raw=true "Simple flow design")
+- Theoritically, this small app could be overengineered enough to make it into a microservice architecture with a MessageBroker to make this as asynchronous as possible
 
 ## Small Demo
 ![Simple flow diagram](docs/3.gif?raw=true)
